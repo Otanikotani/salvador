@@ -12,8 +12,5 @@ jobs:
       - name: Write to a file
         run: java -version
 
-      - name: Read the file
-        run: cat q.txt
-
       - name: Read the file using Docker based action
         uses: ./
