@@ -1,0 +1,18 @@
+name: Test myself
+
+on: push
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Write to a file
+        run: echo 'The only difference between a madman and myself is that I am not mad.' >> q.txt
+
+      - name: Read the file
+        run: cat q.txt
+
+      - name: Read the file using Docker based action
+        uses: ./

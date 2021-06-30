@@ -1,0 +1,7 @@
+# action.yml
+name: 'Salvador'
+description: 'A sample Docker-based Action'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
