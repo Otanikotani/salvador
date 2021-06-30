@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Write to a file
-        run: echo 'The only difference between a madman and myself is that I am not mad.' >> q.txt
+        run: java -version
 
       - name: Read the file
         run: cat q.txt
