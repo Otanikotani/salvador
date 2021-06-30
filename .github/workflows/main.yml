@@ -9,8 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Write to a file
+      - name: Print java version
         run: java -version
 
-      - name: Read the file using Docker based action
+      - name: Run local action
         uses: ./

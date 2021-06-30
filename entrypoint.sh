@@ -2,6 +2,6 @@
 
 set -x
 
-find -iname q.txt
+find -iname java
 
 java -version
