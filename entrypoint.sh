@@ -4,4 +4,4 @@ set -x
 
 find -iname java
 
-java -version
+echo 'Nowhere to be found!'
