@@ -5,7 +5,9 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: adoptopenjdk/openjdk14
+    container:
+      image: adoptopenjdk/openjdk14
+      options: -v /opt/java/openjdk/bin:/opt/java/openjdk/bin -v /usr/local/sbin:/usr/local/sbin -v /usr/local/bin:/usr/local/bin -v /usr/sbin:/usr/sbin -v /usr/bin:/usr/bin -v /sbin:/sbin -v /bin:/bin
     steps:
       - uses: actions/checkout@v2
 
