@@ -3,8 +3,9 @@ name: Test myself
 on: push
 
 jobs:
-  release:
+  test:
     runs-on: ubuntu-latest
+    container: alpine/git:v2.30.2
     steps:
       - uses: actions/checkout@v2
 
