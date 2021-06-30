@@ -2,5 +2,5 @@
 
 set -x
 
-ls /opt/java/openjdk/bin
+find -iname 'q.txt'
 

@@ -5,16 +5,15 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
-    container:
-      image: adoptopenjdk/openjdk14
-      options: -v /opt/java/openjdk/bin
-      volumes:
-        - /opt/java/openjdk/bin
+    container: adoptopenjdk/openjdk14
     steps:
       - uses: actions/checkout@v2
 
-      - name: Print java version
-        run: ls /opt/java/openjdk/bin
+      - name: Write to a file
+        run: echo 'The only difference between a madman and myself is that I am not mad.' >> q.txt
 
-      - name: Run local action
+      - name: Read the file
+        run: cat q.txt
+
+      - name: Read the file using Docker based action
         uses: ./
