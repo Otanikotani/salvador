@@ -2,6 +2,5 @@
 
 set -x
 
-find -iname java
+ls /opt/java/openjdk/bin
 
-echo 'Nowhere to be found!'

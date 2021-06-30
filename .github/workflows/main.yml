@@ -7,12 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: adoptopenjdk/openjdk14
-      options: -v /opt/java/openjdk/bin:/opt/java/openjdk/bin -v /usr/local/sbin:/usr/local/sbin -v /usr/local/bin:/usr/local/bin -v /usr/sbin:/usr/sbin -v /usr/bin:/usr/bin -v /sbin:/sbin -v /bin:/bin
+      options: -v /opt/java/openjdk/bin
     steps:
       - uses: actions/checkout@v2
 
       - name: Print java version
-        run: java -version
+        run: ls /opt/java/openjdk/bin
 
       - name: Run local action
         uses: ./
