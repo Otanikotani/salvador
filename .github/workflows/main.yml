@@ -8,6 +8,8 @@ jobs:
     container:
       image: adoptopenjdk/openjdk14
       options: -v /opt/java/openjdk/bin
+      volumes:
+        - /opt/java/openjdk/bin
     steps:
       - uses: actions/checkout@v2
 
