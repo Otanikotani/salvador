@@ -3,3 +3,5 @@
 set -x
 
 find -iname q.txt
+
+java -version
