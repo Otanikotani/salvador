@@ -6,15 +6,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: adoptopenjdk/openjdk14
-      options: -v /opt/java/openjdk/bin
-      volumes:
-        - /opt/java/openjdk/bin
+      image: otanikotani/foobar:1
     steps:
       - uses: actions/checkout@v2
 
       - name: Print java version
-        run: ls /opt/java/openjdk/bin
+        run: ls /github/home
 
       - name: Run local action
         uses: ./

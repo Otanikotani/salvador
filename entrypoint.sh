@@ -2,5 +2,10 @@
 
 set -x
 
-ls /opt/java/openjdk/bin
+env
+
+echo $PATH
+ls /github/home
+
+find -iname 'foobar.txt'
 
