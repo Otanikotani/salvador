@@ -5,13 +5,8 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
-    container:
-      image: otanikotani/foobar:1
     steps:
       - uses: actions/checkout@v2
 
       - name: Print java version
-        run: ls /github/home
-
-      - name: Run local action
-        uses: ./
+        run: which sam
