@@ -10,3 +10,20 @@ jobs:
 
       - name: Print java version
         run: which sam
+
+  abc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Print java version
+        run: echo "ABC"
+
+  abc2:
+    needs: abc
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Print java version
+        run: echo "ABC 2"
